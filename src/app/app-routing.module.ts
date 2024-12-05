@@ -3,45 +3,26 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./users/home/home.module').then(m => m.HomePageModule)
+    path: '',
+    redirectTo: 'home',  // Si no se encuentra un path, se redirige a 'home'
+    pathMatch: 'full'  // Asegura que se redirija solo si la ruta está completamente vacía
   },
   {
-    path: '',
+    path: 'home',  // Ruta para el home
+    loadChildren: () => import('./users/home/home.module').then(m => m.HomePageModule),
+  },
+  {
+    path: 'login',  // Ruta para login
+    loadChildren: () => import('./users/login/login.module').then(m => m.LoginPageModule),
+  },
+  {
+    path: 'register',  // Ruta para registro
+    loadChildren: () => import('./users/register/register.module').then(m => m.RegisterPageModule),
+  },
+  {
+    path: '**',  // Ruta comodín para cualquier ruta no definida, redirige al home
     redirectTo: 'home',
     pathMatch: 'full'
-  },
-  {
-    path: 'login',
-    loadChildren: () => import('./users/login/login.module').then(m => m.LoginPageModule)
-  },
-  {
-    path: 'register',
-    loadChildren: () => import('./users/register/register.module').then(m => m.RegisterPageModule)
-  },
-  {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },
-  {
-    path: 'register',
-    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
-  },
-  {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },
-  {
-    path: 'register',
-    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
-  },
-  {
-    path: 'login',
-    loadChildren: () => import('./users/login/login.module').then( m => m.LoginPageModule)
-  },
-  {
-    path: 'register',
-    loadChildren: () => import('./users/register/register.module').then( m => m.RegisterPageModule)
   }
 ];
 
