@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<!-- login inicio -->
+<ion-content [fullscreen]="true" class="login-content">
+  <ion-header collapse="condense"></ion-header>
+  
+  <div class="welcome-container compact-container">
+    <img
+      alt="Logo RegistrApp"
+      class="logo compact-logo"
+      src="https://firebasestorage.googleapis.com/v0/b/proyect2-daf7b.appspot.com/o/Logo_RegistrApp.png?alt=media&token=bd36c9ff-e46a-442d-a830-22025ccb1e75"
+    />
+    
+    <h1 class="welcome-title compact-title">𝑹𝒆𝒈𝒊𝒔𝒕𝒓𝑨𝒑𝒑</h1>
+    
+    <form #form="ngForm" (ngSubmit)="login(form)" class="login-form compact-form">
+      <ion-item class="login-item compact-item" lines="none">
+        <ion-input name="email" type="email" placeholder="email@duocuc.cl" ngModel required></ion-input>
+      </ion-item>
+      <ion-item class="login-item compact-item" lines="none">
+        <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
+      </ion-item>
+      <ion-button expand="block" color="primary" type="submit" [disabled]="form.invalid" class="compact-button">Iniciar Sesión</ion-button>
+    </form>
+
+    <h6 class="account-text compact-text">¿No tienes cuenta?</h6>
+    <ion-button expand="block" fill="clear" color="tertiary" class="compact-button">Regístrate</ion-button>
+
+    <!-- Botón para volver a la página principal -->
+    <ion-button expand="block" fill="clear" color="secondary" [routerLink]="['/home']" class="compact-button">
+      Volver a la Página Principal
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,42 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.welcome-container {
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Color de fondo suave */
+  text-align: center; /* Centra el texto */
+}
+
+.logo {
+  width: 45%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.welcome-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  background-color: #343870;
+}
+
+.welcome-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.account-text {
+  margin-top: 20px;
+  color: #6c757d; /* Color de texto secundario */
+}

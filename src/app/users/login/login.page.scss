@@ -1,0 +1,68 @@
+.login-content {
+  --background: #f0f4f7; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 16px; 
+}
+
+.welcome-container {
+  height: auto; 
+  max-width: 320px; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  background-color: #ffffff; 
+  text-align: center; 
+  padding: 24px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 12px; 
+}
+
+.logo {
+  width: 45%; 
+  height: auto; 
+  margin-bottom: 20px; 
+}
+
+.welcome-title {
+  font-size: 1.5rem; 
+  margin-bottom: 10px; 
+  font-weight: bold; 
+  color: #343870; 
+}
+
+.login-item {
+  --background: #dad9d9; 
+  --border-radius: 8px; 
+  margin-bottom: 12px; 
+  padding-left: 8px; 
+}
+
+ion-input {
+  --padding-start: 10px; 
+  --color: #333333; 
+  --placeholder-color: #888888; 
+}
+
+.compact-button {
+  margin-top: 12px; 
+  width: 100%; 
+  font-size: 1rem; 
+  padding: 12px; 
+  background-color: #f1f1f1; 
+  color: #ffffff; 
+  border-radius: 8px; 
+}
+
+
+.compact-button:hover {
+  background-color: #343870; 
+}
+
+.account-text {
+  margin-top: 20px; 
+  color: #6c757d; 
+}
+
